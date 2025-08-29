@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vegas Multum Digital Solutions | Social Media Management & Digital Marketing</title>
+    <meta name="description" content="Professional social media management and digital marketing solutions for small and medium businesses. Authentic strategies that drive real results in Las Vegas and beyond.">
+    <meta name="keywords" content="social media management, digital marketing, Las Vegas, small business, content creation, social media strategy">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700;800;900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Agrandir:wght@300;400;500;600;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Agrandir+Grand:wght@400;500;600;700;800;900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --rust: #B7410E;
+            --nectar: #FFD700;
+            --off-white: #FAF9F6;
+            --gun-metal: #2C3539;
+            --sunset: #FF6B35;
+            --silver: #C0C0C0;
+            --burgundy: #800020;
+            --light-gray: #F5F5F5;
+            --medium-gray: #E0E0E0;
+        }
+
+        body {
+            font-family: 'Agrandir', sans-serif;
+            line-height: 1.6;
+            color: var(--gun-metal);
+            overflow-x: hidden;
+        }
+
+        /* Modern Professional Background */
+        .bg-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 200%;
+            z-index: -1;
+            background: linear-gradient(
+                135deg,
+                var(--gun-metal) 0%,
+                #3A4A52 25%,
+                #4A5A62 50%,
+                var(--rust) 100%
+            );
+            background-size: 400% 400%;
+            animation: subtleGradientShift 30s ease infinite;
+        }
+
+        @keyframes subtleGradientShift {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        /* Clean Floating Section Base */
+        .floating-section {
+            background: rgba(250, 249, 246, 0.98);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 3rem;
+            margin: 2rem auto;
+            max-width: 1200px;
+            width: 90%;
+            box-shadow: 0 10px 30px rgba(44, 53, 57, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transform: translateY(20px);
+            opacity: 0;
+            animation: fadeInUp 0.8s ease forwards;
+            position: relative;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        /* Header */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(44, 53, 57, 0.97);
+            backdrop-filter: blur(15px);
+            padding: 1.5rem 0;
+            margin-bottom: 2rem;
+            border-bottom: 1px solid var(--nectar);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            font-family: 'League Spartan', sans-serif;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--nectar);
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: var(--off-white);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+        }
+
+        nav a:hover {
+            color: var(--nectar);
+            background: rgba(255, 215, 0, 0.1);
+            transform: translateY(-1px);
+        }
+
+        /* Modern Buttons */
+        .btn {
+            display: inline-block;
+            padding: 0.875rem 1.75rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            font-family: 'League Spartan', sans-serif;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--rust), var(--sunset));
+            color: var(--off-white);
+            box-shadow: 0 4px 12px rgba(183, 65, 14, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(183, 65, 14, 0.4);
+        }
+
+        .btn-secondary {
+            background: var(--gun-metal);
+            color: var(--off-white);
+            box-shadow: 0 4px 12px rgba(44, 53, 57, 0.3);
+        }
+
+        .btn-secondary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(44, 53, 57, 0.4);
+            background: #3A4A52;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            animation-delay: 0.2s;
+        }
+
+        .hero h1 {
+            font-family: 'League Spartan', sans-serif;
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: var(--gun-metal);
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-family: 'League Spartan', sans-serif;
+            font-size: 1.25rem;
+            font-weight: 500;
+            color: var(--rust);
+            margin-bottom: 2rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Daily SEO Report Section */
+        .daily-report {
+            background: var(--light-gray);
+            border-radius: 15px;
+            padding: 2rem;
+            margin: 2rem 0;
+            border-left: 4px solid var(--nectar);
+        }
+
+        .report-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .report-title {
+            font-family: 'Agrandir Grand', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--gun-metal);
+        }
+
+        .last-updated {
+            font-size: 0.9rem;
+            color: var(--rust);
+            font-weight: 500;
+        }
+
+        .seo-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .seo-item {
+            background: white;
+            padding: 1.25rem;
+            border-radius: 10px;
+            border: 1px solid var(--medium-gray);
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+
+        .seo-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(44, 53, 57, 0.1);
+            border-color: var(--nectar);
+        }
+
+        .seo-rank {
+            background: var(--nectar);
+            color: var(--gun-metal);
+            font-weight: bold;
+            font-size: 0.9rem;
+            padding: 0.5rem 0.75rem;
+            border-radius: 6px;
+            min-width: 40px;
+            text-align: center;
+        }
+
+        .seo-content h3 {
+            font-family: 'League Spartan', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--gun-metal);
+            margin-bottom: 0.5rem;
+        }
+
+        .seo-content p {
+            font-size: 0.95rem;
+            color: var(--rust);
+            margin-bottom: 0.75rem;
+            line-height: 1.4;
+        }
+
+        .seo-link {
+            color: var(--sunset);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        .seo-link:hover {
+            color: var(--rust);
+            text-decoration: underline;
+        }
+
+        /* Services Grid */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .service-card {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 1px solid var(--medium-gray);
+            box-shadow: 0 4px 15px rgba(44, 53, 57, 0.08);
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(44, 53, 57, 0.15);
+            border-color: var(--nectar);
+        }
+
+        .service-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, var(--nectar), var(--sunset));
+            border-radius: 50%;
+            margin: 0 auto 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: var(--gun-metal);
+            box-shadow: 0 6px 20px rgba(255, 215, 0, 0.3);
+        }
+
+        .service-card h3 {
+            font-family: 'League Spartan', sans-serif;
+            color: var(--gun-metal);
+            margin-bottom: 1rem;
+            font-size: 1.4rem;
+            font-weight: 700;
+        }
+
+        .service-card p {
+            color: var(--rust);
+            margin-bottom: 1.5rem;
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+
+        .price {
+            font-family: 'League Spartan', sans-serif;
+            font-size: 1.75rem;
+            font-weight: bold;
+            color: var(--burgundy);
+            margin-bottom: 1.5rem;
+        }
+
+        /* About Section */
+        .about {
+            animation-delay: 0.4s;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            margin: 2rem 0;
+        }
+
+        .about-text h2 {
+            font-family: 'Agrandir Grand', sans-serif;
+            color: var(--gun-metal);
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+        }
+
+        .about-text p {
+            color: var(--rust);
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 1.5rem;
+            background: white;
+            border-radius: 15px;
+            border: 1px solid var(--medium-gray);
+            transition: all 0.3s ease;
+        }
+
+        .stat-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(44, 53, 57, 0.1);
+        }
+
+        .stat-number {
+            font-family: 'League Spartan', sans-serif;
+            font-size: 2.25rem;
+            font-weight: 800;
+            color: var(--burgundy);
+        }
+
+        .stat-label {
+            font-family: 'League Spartan', sans-serif;
+            color: var(--gun-metal);
+            font-size: 0.95rem;
+            font-weight: 600;
+            margin-top: 0.5rem;
+        }
+
+        /* Section Titles */
+        .section-title {
+            font-family: 'Agrandir Grand', sans-serif;
+            font-size: 2.75rem;
+            font-weight: 700;
+            color: var(--gun-metal);
+            text-align: center;
+            margin-bottom: 2.5rem;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--nectar), var(--sunset));
+            margin: 1rem auto;
+            border-radius: 2px;
+        }
+
+        /* Contact Form */
+        .contact-form {
+            animation-delay: 0.6s;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.25rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--gun-metal);
+            font-weight: 600;
+            font-family: 'League Spartan', sans-serif;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 0.875rem;
+            border: 2px solid var(--medium-gray);
+            border-radius: 8px;
+            background: white;
+            color: var(--gun-metal);
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            font-family: 'Agrandir', sans-serif;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--nectar);
+            box-shadow: 0 0 0 3px rgba(255, 215, 0, 0.1);
+        }
+
+        .form-group.full-width {
+            grid-column: 1 / -1;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--gun-metal);
+            color: var(--off-white);
+            text-align: center;
+            padding: 2.5rem 2rem;
+            margin-top: 3rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 1rem;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .floating-section {
+                width: 95%;
+                padding: 2rem;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stats {
+                grid-template-columns: 1fr;
+            }
+
+            .seo-list {
+                grid-template-columns: 1fr;
+            }
+
+            .report-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+
+        /* Animation Delays */
+        .floating-section:nth-child(2) { animation-delay: 0.1s; }
+        .floating-section:nth-child(3) { animation-delay: 0.2s; }
+        .floating-section:nth-child(4) { animation-delay: 0.3s; }
+        .floating-section:nth-child(5) { animation-delay: 0.4s; }
+        .floating-section:nth-child(6) { animation-delay: 0.5s; }
+
+        .floating-section:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(44, 53, 57, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .highlight {
+            color: var(--nectar);
+            font-weight: bold;
+        }
+
+        /* Professional disclaimer */
+        .disclaimer {
+            font-size: 0.85rem;
+            color: var(--rust);
+            font-style: italic;
+            margin-top: 1rem;
+            padding: 1rem;
+            background: rgba(255, 215, 0, 0.05);
+            border-radius: 8px;
+            border-left: 3px solid var(--nectar);
+        }
+    </style>
+</head>
+<body>
+    <!-- Modern Professional Background -->
+    <div class="bg-container"></div>
+
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <div class="logo">Vegas Multum Digital</div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="floating-section hero">
+        <h1>Amplify Your <span class="highlight">Digital Presence</span></h1>
+        <p>Professional social media management that drives real results for small and medium businesses. Authentic strategies, measurable growth, genuine engagement.</p>
+        
+        <!-- Daily SEO Report -->
+        <div class="daily-report">
+            <div class="report-header">
+                <h3 class="report-title">Top 10 SEO Companies in Las Vegas</h3>
+                <span class="last-updated">Last updated: <span id="update-time">Loading...</span></span>
+            </div>
+            <p style="color: var(--rust); margin-bottom: 1rem;">Our AI bot scans the top natural search results daily to bring you the most current rankings of Las Vegas SEO companies.</p>
+            
+            <div class="seo-list" id="seo-companies">
+                <!-- AI-generated content will be loaded here -->
+            </div>
+
+            <div class="disclaimer">
+                <strong>Disclaimer:</strong> This data is automatically collected and analyzed by our AI system every 24 hours. Rankings and information are based on natural search results for "best SEO companies in Las Vegas" and may change frequently. Vegas Multum Digital is not affiliated with the companies listed above.
+            </div>
+        </div>
+
+        <div style="margin-top: 2rem;">
+            <a href="#contact" class="btn btn-primary">Get Started Today</a>
+            <a href="#services" class="btn btn-secondary" style="margin-left: 1rem;">View Services</a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="floating-section">
+        <h2 class="section-title">Our Core Services</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">ðŸ“±</div>
+                <h3>Social Media Management</h3>
+                <p>Complete social media strategy, content creation, and community management across all major platforms.</p>
+                <div class="price">$1,200/month</div>
+                <a href="#contact" class="btn btn-primary">Learn More</a>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">ðŸ“Š</div>
+                <h3>Content Strategy & Creation</h3>
+                <p>Custom content calendars, professional graphics, and engaging copy that resonates with your target audience.</p>
+                <div class="price">$800/month</div>
+                <a href="#contact" class="btn btn-primary">Learn More</a>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">ðŸŽ¯</div>
+                <h3>Paid Advertising</h3>
+                <p>Strategic social media advertising campaigns that maximize ROI and drive qualified leads to your business.</p>
+                <div class="price">$600/month + ad spend</div>
+                <a href="#contact" class="btn btn-primary">Learn More</a>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">ðŸ“ˆ</div>
+                <h3>Analytics & Reporting</h3>
+                <p>Comprehensive monthly reports with actionable insights and data-driven recommendations for growth.</p>
+                <div class="price">$400/month</div>
+                <a href="#contact" class="btn btn-primary">Learn More</a>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">ðŸ¤</div>
+                <h3>Community Management</h3>
+                <p>Professional customer service and engagement to build meaningful relationships with your audience.</p>
+                <div class="price">$500/month</div>
+                <a href="#contact" class="btn btn-primary">Learn More</a>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">ðŸŽ¬</div>
+                <h3>Video Content Production</h3>
+                <p>Professional video content creation, editing, and optimization for maximum social media impact.</p>
+                <div class="price">$900/month</div>
+                <a href="#contact" class="btn btn-primary">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="floating-section about">
+        <div class="about-grid">
+            <div class="about-text">
+                <h2>Why Choose <span class="highlight">Vegas Multum Digital?</span></h2>
+                <p>We're not just another digital agency. We're your dedicated partners in building authentic online relationships that translate into real business growth. Our team combines creativity with data-driven strategies to deliver results that matter.</p>
+                <p>Based in Las Vegas, we understand the unique challenges small and medium businesses face in today's competitive digital landscape. We provide personalized solutions that fit your budget while delivering enterprise-level results.</p>
+                <p><strong>Our commitment:</strong> Transparency, authenticity, and measurable results. No black-box strategies, no inflated metrics â€“ just honest, effective social media management that grows your business.</p>
+            </div>
+            <div class="stats">
+                <div class="stat-item">
+                    <div class="stat-number">150+</div>
+                    <div class="stat-label">Happy Clients</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">300%</div>
+                    <div class="stat-label">Average Engagement Increase</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">24/7</div>
+                    <div class="stat-label">Support Available</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">5 Years</div>
+                    <div class="stat-label">Industry Experience</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Value Proposition -->
+    <section class="floating-section">
+        <h2 class="section-title">The <span class="highlight">Vegas Multum</span> Difference</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">ðŸ’¡</div>
+                <h3>Strategic Approach</h3>
+                <p>Every campaign is backed by thorough market research and competitor analysis to ensure maximum impact.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">ðŸŽ¨</div>
+                <h3>Creative Excellence</h3>
+                <p>Our design team creates visually stunning content that captures attention and drives engagement.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">ðŸ“ž</div>
+                <h3>Personal Service</h3>
+                <p>You'll work directly with dedicated account managers who understand your business and goals.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section id="contact" class="floating-section contact-form">
+        <h2 class="section-title">Ready to <span class="highlight">Transform</span> Your Digital Presence?</h2>
+        <p style="text-align: center; font-size: 1.2rem; color: var(--rust); margin-bottom: 3rem;">
+            Get your free consultation and custom strategy roadmap today.
+        </p>
+        <form>
+            <div class="form-grid">
+                <div class="form-group">
+                    <label for="name">Full Name *</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+                <div class="form-group">
+                    <label for="company">Company Name</label>
+                    <input type="text" id="company" name="company">
+                </div>
+                <div class="form-group">
+                    <label for="service">Service Interest</label>
+                    <select id="service" name="service">
+                        <option value="">Select a service</option>
+                        <option value="social-management">Social Media Management</option>
+                        <option value="content-creation">Content Strategy & Creation</option>
+                        <option value="paid-advertising">Paid Advertising</option>
+                        <option value="analytics">Analytics & Reporting</option>
+                        <option value="community-management">Community Management</option>
+                        <option value="video-production">Video Content Production</option>
+                        <option value="full-package">Complete Digital Package</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="budget">Monthly Budget Range</label>
+                    <select id="budget" name="budget">
+                        <option value="">Select budget range</option>
+                        <option value="500-1000">$500 - $1,000</option>
+                        <option value="1000-2000">$1,000 - $2,000</option>
+                        <option value="2000-5000">$2,000 - $5,000</option>
+                        <option value="5000+">$5,000+</option>
+                    </select>
+                </div>
+                <div class="form-group full-width">
+                    <label for="message">Tell Us About Your Goals</label>
+                    <textarea id="message" name="message" rows="5" placeholder="What are your biggest social media challenges? What goals do you want to achieve?"></textarea>
+                </div>
+                <div class="form-group full-width" style="text-align: center;">
+                    <button type="submit" class="btn btn-primary" style="margin-right: 1rem;">Send My Free Consultation Request</button>
+                    <button type="button" class="btn btn-secondary" onclick="window.open('tel:+17025551234')">Call Us Now: (702) 555-1234</button>
+                </div>
+            </div>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p style="font-family: 'League Spartan', sans-serif; font-weight: 600;">&copy; 2025 Vegas Multum Digital Solutions. All rights reserved.</p>
+        <p style="font-family: 'League Spartan', sans-serif; font-weight: 500;">ðŸ“§ hello@vegasmultumdigital.com | ðŸ“ž (702) 555-1234 | ðŸ“ Las Vegas, Nevada</p>
+        <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8; font-family: 'League Spartan', sans-serif;">
+            Empowering businesses through authentic digital storytelling and strategic social media growth.
+        </p>
+    </footer>
+
+    <script>
+        // Simulated SEO companies data (in real implementation, this would come from your AI bot's API)
+        const seoCompaniesData = [
+            {
+                rank: 1,
+                name: "Vegas SEO Pro",
+                description: "Full-service digital marketing agency specializing in local SEO optimization and Google My Business management for Las Vegas businesses.",
+                website: "https://vegasseopro.com"
+            },
+            {
+                rank: 2,
+                name: "Desert Digital Marketing",
+                description: "Award-winning SEO company focused on helping Las Vegas enterprises dominate search rankings through proven strategies.",
+                website: "https://desertdigitalmarketing.com"
+            },
+            {
+                rank: 3,
+                name: "Vegas Web Solutions",
+                description: "
